@@ -4,7 +4,7 @@
       username: !secret garadget_username
       password: !secret garadget_password
       name: Main Garage Door
-    # 4e004e000351353530353431:
-    #   username: !secret garadget_username
-    #   password: !secret garadget_password
-    #   name: Small Garage Door
+    1e0037000251353530353431:
+      username: !secret garadget_username
+      password: !secret garadget_password
+      name: Small Garage Door

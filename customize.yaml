@@ -6,7 +6,7 @@ sensor.main_garage_door_time_in_state:
   icon: mdi:timer-sand
 sensor.main_garage_door_wifi_signal_strength:
   icon: mdi:wifi
-# sensor.small_garage_door_time_in_state:
-#   icon: mdi:timer-sand
-# sensor.small_garage_door_wifi_signal_strength:
-#   icon: mdi:wifi
+sensor.small_garage_door_time_in_state:
+  icon: mdi:timer-sand
+sensor.small_garage_door_wifi_signal_strength:
+  icon: mdi:wifi

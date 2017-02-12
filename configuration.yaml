@@ -20,7 +20,8 @@ updater:
 discovery:
 conversation:
 recorder:
-  
+  db_url: !secret mysql_connection_string
+
 http:
   api_password: !secret http_password
   base_url: !secret http_path
