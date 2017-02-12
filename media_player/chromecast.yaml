@@ -1,0 +1,12 @@
+- platform: cast
+  name: Living Chromecast
+  host: 192.168.1.52
+- platform: cast
+  name: Master Chromecast
+  host: 192.168.1.71
+- platform: cast
+  name: Master Home
+  host: 192.168.1.208
+- platform: cast
+  name: Living Home
+  host: 192.168.1.42

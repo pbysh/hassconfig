@@ -1,0 +1,74 @@
+homeassistant:
+  name: Bergantino Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: 120
+  unit_system: imperial
+  time_zone: America/Los_Angeles
+  customize: !include customize.yaml
+
+frontend:
+history:
+logbook:
+  exclude:
+    entities:
+      - media_player.master_home
+      - sensor.main_garage_door_time_in_state
+      - sensor.main_garage_door_wifi_signal_strength
+sun:
+updater:
+discovery:
+conversation:
+recorder:
+  
+http:
+  api_password: !secret http_password
+  base_url: !secret http_path
+
+zwave:
+  usb_path: /dev/ttyACM0
+  config_path: /home/homeassistant/.homeassistant/config
+
+  customize:
+    light.dining_room_level_5_0:
+      refresh_value: true
+      delay: 2
+    light.living_room_level_6_0:
+      refresh_value: true
+      delay: 2
+
+emulated_hue:
+  host_ip: !secret hassbian_ip
+  type: google_home
+  listen_port: 80
+  exposed_domains:
+    - light
+
+mqtt:
+  broker: !secret hassbian_ip
+  port: 1883
+  client_id: hass
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+
+device_tracker:
+  - platform: owntracks
+    max_gps_accuracy: 200
+
+logger:
+  default: info
+
+tts:
+  platform: google
+
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_secret
+
+cover: !include_dir_merge_list cover
+zone: !include_dir_merge_list zone
+sensor: !include_dir_merge_list sensor
+media_player: !include_dir_merge_list media_player
+notify: !include_dir_merge_list notify
+group: !include_dir_merge_named group
+automation: !include_dir_merge_list automation

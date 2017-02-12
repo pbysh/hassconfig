@@ -1,0 +1,10 @@
+- alias: Dining Room Light
+  trigger:
+    platform: state
+    entity_id: light.dining_room_level_5_0
+    from: 'off'
+    to: 'on'
+  action:
+    service: notify.living_tv
+    data:
+      message: 'The dining room light is on!'

@@ -1,0 +1,49 @@
+default_view:
+  view: yes
+  entities:
+    - sensor.downstairs_thermostat_temperature
+    - sensor.yr_symbol
+    - sensor.beaster_20
+    - device_tracker.paolo_nexus6p
+    - device_tracker.paolo_nexus5x
+    - device_tracker.paolo_nexus5o      
+    - group.living
+    - group.master
+    - group.other
+    - group.main_garage
+    - group.downstairs_lights
+
+living:
+  name: Living Room
+  entities:
+    - media_player.living_room_tv
+#      - media_player.living_tv
+#      - media_player.plex_for_lg_webos_043065
+#      - media_player.living_home
+
+master:
+  name: Master Bedroom
+  entities:
+    - media_player.master_chromecast
+#      - media_player.master_home
+
+downstairs_lights:
+  name: Downstairs Lights
+  entities:
+    - light.dining_room_level_5_0
+    - light.living_room_level_6_0
+
+other:
+  name: Nest
+  entities:
+    - climate.downstairs
+    - camera.kids_room
+
+other_media:
+  name: Media
+  view: yes
+  entities:
+    - media_player.master_home
+    - media_player.living_tv
+    - media_player.living_home
+    - media_player.plex_for_lg_webos_043065

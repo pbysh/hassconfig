@@ -1,0 +1,38 @@
+- platform: universal
+  name: Living Room TV
+  children:
+    - media_player.plex_for_lg_webos_043065      
+    - media_player.living_tv
+    - media_player.living_chromecast
+
+  attributes:
+    is_volume_muted: media_player.living_tv|is_volume_muted
+    volume_level: media_player.living_tv|volume_level
+    source: media_player.living_tv|source
+    source_list: media_player.living_tv|source_list
+
+  commands:
+    turn_on:
+      service: media_player.turn_on
+      data:
+        entity_id: media_player.living_tv
+    turn_off:
+      service: media_player.turn_off
+      data:
+        entity_id: media_player.living_tv
+    select_source:
+      service: media_player.select_source
+      data:
+        entity_id: media_player.living_tv
+    volume_up:
+      service: media_player.volume_up
+      data:
+        entity_id: media_player.living_tv
+    volume_down:
+      service: media_player.volume_down
+      data:
+        entity_id: media_player.living_tv
+    volume_mute:
+      service: media_player.volume_mute
+      data:
+        entity_id: media_player.living_tv

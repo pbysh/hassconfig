@@ -1,0 +1,10 @@
+- platform: garadget
+  covers:
+    45001d001151353432393433:
+      username: !secret garadget_username
+      password: !secret garadget_password
+      name: Main Garage Door
+    # 4e004e000351353530353431:
+    #   username: !secret garadget_username
+    #   password: !secret garadget_password
+    #   name: Small Garage Door

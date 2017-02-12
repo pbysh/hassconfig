@@ -1,0 +1,23 @@
+garage:
+  name: Garage
+  entities:
+    - group.main_garage
+    # - group.small_garage
+
+main_garage:
+  name: Main Garage
+  entities:
+    - cover.main_garage_door
+    - sensor.main_garage_door_status
+    - sensor.main_garage_door_time_in_state
+    - sensor.main_garage_door_wifi_signal_strength
+    - sensor.main_garage_door_reflection_rate
+
+# small_garage:
+#   name: Small Garage
+#   entities:
+#     - cover.small_garage_door
+#     - sensor.small_garage_door_status
+#     - sensor.small_garage_door_time_in_state
+#     - sensor.small_garage_door_wifi_signal_strength
+#     - sensor.small_garage_door_reflection_rate

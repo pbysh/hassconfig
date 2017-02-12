@@ -1,0 +1,22 @@
+- alias: Take Medicine
+  trigger:
+    platform: time
+    after: "06:00:00"
+  action:
+    service: notify.paolobullet
+    data:
+      title: "Take your medicine"
+      message: "Please don't make me ask again"
+- alias: Take Out Trash
+  trigger:
+    platform: time
+    after: "20:00:00"
+  condition:
+    - condition: time
+      weekday:
+        - tue
+  action:
+    service: notify.paolobullet
+    data:
+      title: "Take out the trash"
+      message: "Take out the trash"

@@ -1,0 +1,10 @@
+- platform: mqtt
+  state_topic: "owntracks/paolo/nexus6p"
+  name: "Paolo Battery"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.batt }}'
+- platform: mqtt
+  state_topic: "owntracks/paolo/nexus5x"
+  name: "Amanda Battery"
+  unit_of_measurement: "%"
+  value_template: '{{ value_json.batt }}'

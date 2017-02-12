@@ -1,0 +1,22 @@
+- alias: Amanda Left
+  trigger:
+    platform: zone
+    entity_id: device_tracker.paolo_nexus5x
+    zone: zone.home
+    event: leave
+  action:
+    service: notify.paolobullet
+    data:
+      title: "Amanda Left"
+      message: "Amanda left the house"
+- alias: Amanda Back
+  trigger:
+    platform: zone
+    entity_id: device_tracker.paolo_nexus5x
+    zone: zone.home
+    event: enter
+  action:
+    service: notify.paolobullet
+    data:
+      title: "Amanda Is Home"
+      message: "Amanda has arrived at the house"
