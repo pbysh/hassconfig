@@ -3,10 +3,9 @@
     platform: time
     after: "06:00:00"
   action:
-    service: notify.paolobullet
+    service: notify.hassbot
     data:
-      title: "Take your medicine"
-      message: "Please don't make me ask again"
+      title: "Please take your medicine"
 - alias: Take Out Trash
   trigger:
     platform: time
@@ -16,7 +15,54 @@
       weekday:
         - tue
   action:
-    service: notify.paolobullet
+    service: notify.hassbot
     data:
-      title: "Take out the trash"
-      message: "Take out the trash"
+      message: "Don't forget to take out the trash"
+- alias: Morning Traffic Alert
+  trigger:
+    platform: time
+    minutes: '/10'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        after: '06:00:00'
+        before: '07:00:00'
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: device_tracker.paolo_nexus6p
+        state: 'home'
+  action:
+    - service: notify.hassbot
+      data:
+        message: "Traffic update. If you leave now, you will arrive at work around {{ ((as_timestamp(now()) + (states.sensor.home_to_work.state | int * 60)) | timestamp_custom('%I:%M %p', True)) }}."
+- alias: Evening Traffic Alert
+  trigger:
+    platform: time
+    minutes: '/5'
+    seconds: 00
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        after: '15:00:00'
+        before: '16:00:00'
+        weekday:
+          - mon
+          - tue
+          - wed
+          - thu
+          - fri
+      - condition: state
+        entity_id: device_tracker.paolo_nexus6p
+        state: 'work'
+  action:
+    - service: notify.hassbot
+      data:
+        message: "Traffic update. If you leave now, you will arrive at home around {{ ((as_timestamp(now()) + (states.sensor.work_to_home.state | int * 60)) | timestamp_custom('%I:%M %p', True)) }}."

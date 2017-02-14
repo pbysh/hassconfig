@@ -10,3 +10,6 @@ sensor.small_garage_door_time_in_state:
   icon: mdi:timer-sand
 sensor.small_garage_door_wifi_signal_strength:
   icon: mdi:wifi
+binary_sensor.front_door_sensor_8_0:
+  friendly_name: Front Door
+  sensor_class: opening

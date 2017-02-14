@@ -3,3 +3,13 @@
   host: 192.168.1.11
   port: 32400
   name: "BEASTER 2.0"
+- platform: google_travel_time
+  name: Home to Work
+  api_key: !secret google_api_key
+  origin: zone.home
+  destination: zone.work
+- platform: google_travel_time
+  name: Work to Home
+  api_key: !secret google_api_key
+  origin: zone.work
+  destination: zone.home

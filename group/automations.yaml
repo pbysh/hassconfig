@@ -1,0 +1,35 @@
+automations:
+  icon: mdi:auto-fix
+  view: yes
+  entities:
+    - group.presence_automations
+    - group.alert_automations
+    - group.reminder_automations
+    - group.traffic_automations
+
+presence_automations:
+  name: Presence Automations
+  entities:
+    - automation.paolo_left
+    - automation.amanda_left
+    - automation.paolo_back
+    - automation.amanda_back
+
+alert_automations:
+  name: Alert Automations
+  entities:
+    - automation.front_door_open    
+    - automation.main_garage_door_open
+    - automation.small_garage_door_open
+
+reminder_automations:
+  name: Reminder Automations
+  entities:
+    - automation.take_medicine
+    - automation.take_out_trash
+
+traffic_automations:
+  name: Traffic Automations
+  entities:
+    - automation.morning_traffic_alert
+    - automation.evening_traffic_alert

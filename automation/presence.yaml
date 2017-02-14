@@ -5,9 +5,8 @@
     zone: zone.home
     event: leave
   action:
-    service: notify.paolobullet
+    service: notify.hassbot
     data:
-      title: "Amanda Left"
       message: "Amanda left the house"
 - alias: Amanda Back
   trigger:
@@ -16,7 +15,26 @@
     zone: zone.home
     event: enter
   action:
-    service: notify.paolobullet
+    service: notify.hassbot
     data:
-      title: "Amanda Is Home"
       message: "Amanda has arrived at the house"
+- alias: Paolo Left
+  trigger:
+    platform: zone
+    entity_id: device_tracker.paolo_nexus6p
+    zone: zone.home
+    event: leave
+  action:
+    service: notify.hassbot
+    data:
+      message: "Paolo left the house"
+- alias: Paolo Back
+  trigger:
+    platform: zone
+    entity_id: device_tracker.paolo_nexus6p
+    zone: zone.home
+    event: enter
+  action:
+    service: notify.hassbot
+    data:
+      message: "Paolo has arrived at the house"

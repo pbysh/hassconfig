@@ -9,12 +9,25 @@ homeassistant:
 
 frontend:
 history:
+  exclude:
+    entities:
+      - media_player.master_home
+      - sensor.main_garage_door_time_in_state
+      - sensor.main_garage_door_wifi_signal_strength
+      - sensor.main_garage_door_reflection_rate
+      - sensor.small_garage_door_time_in_state
+      - sensor.small_garage_door_wifi_signal_strength
+      - sensor.small_garage_door_reflection_rate  
 logbook:
   exclude:
     entities:
       - media_player.master_home
       - sensor.main_garage_door_time_in_state
       - sensor.main_garage_door_wifi_signal_strength
+      - sensor.main_garage_door_reflection_rate
+      - sensor.small_garage_door_time_in_state
+      - sensor.small_garage_door_wifi_signal_strength
+      - sensor.small_garage_door_reflection_rate
 sun:
 updater:
 discovery:
@@ -25,6 +38,10 @@ recorder:
 http:
   api_password: !secret http_password
   base_url: !secret http_path
+
+light:
+  platform: hue
+  host: 192.168.1.121
 
 zwave:
   usb_path: /dev/ttyACM0
@@ -44,6 +61,7 @@ emulated_hue:
   listen_port: 80
   exposed_domains:
     - light
+    - cover
 
 mqtt:
   broker: !secret hassbian_ip

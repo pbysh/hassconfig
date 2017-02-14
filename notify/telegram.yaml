@@ -1,0 +1,4 @@
+- name: hassbot
+  platform: telegram
+  api_key: !secret telegram_key
+  chat_id: !secret telegram_chat_id

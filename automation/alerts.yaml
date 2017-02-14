@@ -1,0 +1,36 @@
+- alias: Front Door Open
+  trigger:
+    platform: state
+    entity_id: binary_sensor.front_door_sensor_8_0
+    from: 'off'
+    to: 'on'
+    for:
+      minutes: 3
+  action:
+    service: notify.hassbot
+    data:
+      message: 'Front door has been open for 3 minutes.'
+- alias: Main Garage Door Open
+  trigger:
+    platform: state
+    entity_id: cover.main_garage_door
+    from: 'closed'
+    to: 'open'
+    for:
+      minutes: 5
+  action:
+    service: notify.hassbot
+    data:
+      message: 'Main garage door has been open for 5 minutes.'
+- alias: Small Garage Door Open
+  trigger:
+    platform: state
+    entity_id: cover.small_garage_door
+    from: 'closed'
+    to: 'open'
+    for:
+      minutes: 5
+  action:
+    service: notify.hassbot
+    data:
+      message: 'Small garage door has been open for 5 minutes.'

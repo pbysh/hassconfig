@@ -1,8 +1,15 @@
 garage:
-  name: Garage
+  icon: mdi:garage
+  view: yes
   entities:
     - group.main_garage
     - group.small_garage
+
+garage_group:
+  name: Garage Doors
+  entities:
+    - cover.main_garage_door
+    - cover.small_garage_door
 
 main_garage:
   name: Main Garage
