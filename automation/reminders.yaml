@@ -5,7 +5,7 @@
   action:
     service: notify.hassbot
     data:
-      title: "Please take your medicine"
+      message: "Please take your medicine"
 - alias: Take Out Trash
   trigger:
     platform: time
