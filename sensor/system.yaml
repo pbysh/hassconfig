@@ -1,0 +1,9 @@
+- platform: systemmonitor
+  resources:
+    - type: load_1m
+    - type: load_5m
+    - type: load_15m
+    - type: memory_use_percent
+    - type: processor_use
+    - type: since_last_boot
+- platform: cpuspeed

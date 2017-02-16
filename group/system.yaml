@@ -1,0 +1,16 @@
+cpu:
+  icon: mdi:raspberrypi
+  view: yes
+  entities:
+    - group.cpu_stats
+
+cpu_stats:
+  name: Hassbian
+  entities:
+    - sensor.cpu_speed
+    - sensor.cpu_use
+    - sensor.ram_use
+    - sensor.average_load_1m
+    - sensor.average_load_5m
+    - sensor.average_load_15m
+    - sensor.since_last_boot

@@ -61,7 +61,7 @@
           - fri
       - condition: state
         entity_id: device_tracker.paolo_nexus6p
-        state: 'work'
+        state: 'Work'
   action:
     - service: notify.hassbot
       data:

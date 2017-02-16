@@ -1,5 +1,5 @@
 homeassistant:
-  name: Bergantino Home
+  name: Home
   latitude: !secret home_latitude
   longitude: !secret home_longitude
   elevation: 120
@@ -17,7 +17,7 @@ history:
       - sensor.main_garage_door_reflection_rate
       - sensor.small_garage_door_time_in_state
       - sensor.small_garage_door_wifi_signal_strength
-      - sensor.small_garage_door_reflection_rate  
+      - sensor.small_garage_door_reflection_rate
 logbook:
   exclude:
     entities:
@@ -34,6 +34,7 @@ discovery:
 conversation:
 recorder:
   db_url: !secret mysql_connection_string
+  purge_days: 5
 
 http:
   api_password: !secret http_password
