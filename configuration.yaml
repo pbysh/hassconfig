@@ -8,6 +8,7 @@ homeassistant:
   customize: !include customize.yaml
 
 frontend:
+config:
 history:
   exclude:
     entities:
@@ -48,14 +49,7 @@ light:
 zwave:
   usb_path: /dev/ttyACM0
   config_path: /home/homeassistant/.homeassistant/config
-
-  customize:
-    light.dining_room_level_5_0:
-      refresh_value: true
-      delay: 2
-    light.living_room_level_6_0:
-      refresh_value: true
-      delay: 2
+  device_config: !include zwave_device_config.yaml
 
 emulated_hue:
   host_ip: !secret hassbian_ip
@@ -91,5 +85,5 @@ zone: !include_dir_merge_list zone
 sensor: !include_dir_merge_list sensor
 media_player: !include_dir_merge_list media_player
 notify: !include_dir_merge_list notify
-group: !include_dir_merge_named group
+group: !include groups.yaml
 automation: !include_dir_merge_list automation
