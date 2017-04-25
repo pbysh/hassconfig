@@ -1,9 +1,24 @@
 light.dining_room_level_5_0:
   refresh_value: true
-  delay: 2
+  delay: 1
 light.living_room_level_6_0:
   refresh_value: true
-  delay: 2
+  delay: 1
 binary_sensor.front_door_sensor_8_0:
   ignored: false
   polling_intensity: 0
+switch.kitchen_1_switch_9_0:
+  refresh_value: true
+  delay: 1
+switch.kitchen_2_switch_12_0:
+  refresh_value: true
+  delay: 1
+switch.kitchen_3_switch_15_0:
+  refresh_value: true
+  delay: 1
+switch.patio_switch_11_0:
+  refresh_value: true
+  delay: 1
+switch.garage_switch_16_0:
+  refresh_value: true
+  delay: 1

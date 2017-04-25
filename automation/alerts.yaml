@@ -4,12 +4,38 @@
     entity_id: binary_sensor.front_door_sensor_8_0
     from: 'off'
     to: 'on'
+  action:
+    - service: notify.hassbot
+      data:
+        message: 'Front door open.'
+    - service: tts.google_say
+      entity_id: media_player.living_home
+      data:
+        message: 'Front door open.'
+    - service: tts.google_say
+      entity_id: media_player.master_home
+      data:
+        message: 'Front door open.'
+- alias: Front Door Still Open
+  trigger:
+    platform: state
+    entity_id: binary_sensor.front_door_sensor_8_0
+    from: 'off'
+    to: 'on'
     for:
       minutes: 3
   action:
-    service: notify.hassbot
-    data:
-      message: 'Front door has been open for 3 minutes.'
+    - service: notify.hassbot
+      data:
+        message: 'Front door has been open for 3 minutes.'
+    - service: tts.google_say
+      entity_id: media_player.living_home
+      data:
+        message: 'Front door has been open for 3 minutes.'
+    - service: tts.google_say
+      entity_id: media_player.master_home
+      data:
+        message: 'Front door has been open for 3 minutes.'
 - alias: Main Garage Door Open
   trigger:
     platform: state

@@ -5,8 +5,11 @@ homeassistant:
   elevation: 120
   unit_system: imperial
   time_zone: America/Los_Angeles
+  customize_domain:
+    group:
+      emulated_hue: false
   customize: !include customize.yaml
-
+  
 frontend:
 config:
 history:
@@ -57,7 +60,8 @@ emulated_hue:
   listen_port: 80
   exposed_domains:
     - light
-    - cover
+    - switch
+    - group
 
 mqtt:
   broker: !secret hassbian_ip

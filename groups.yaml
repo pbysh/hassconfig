@@ -19,6 +19,7 @@ alert_automations:
   name: Alert Automations
   entities:
     - automation.front_door_open
+    - automation.front_door_still_open
     - automation.main_garage_door_open
     - automation.small_garage_door_open
 
@@ -50,12 +51,21 @@ downstairs_lights:
     - light.dining_room_level_5_0
     - light.living_room_level_6_0
     - light.living_room_lamp
+    - switch.kitchen_1_switch_9_0
+    - switch.kitchen_2_switch_12_0
+    - switch.kitchen_3_switch_15_0
+
+outside_lights:
+  name: Outside Lights
+  entities:
+    - switch.patio_switch_11_0
+    - switch.garage_switch_16_0
 
 upstairs_lights:
   name: Upstairs Lights
   entities:
     - light.paolo_lamp
-    - light.amanda_lamp
+    - light.amanda_lamp  
 
 nest:
   name: Nest
@@ -86,6 +96,7 @@ default_view:
     - device_tracker.paolo_nexus5x
     - device_tracker.paolo_nexus5o
     - group.downstairs_lights
+    - group.outside_lights
     - group.upstairs_lights
     - group.living
     - group.master

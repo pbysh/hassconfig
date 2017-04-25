@@ -1,4 +1,4 @@
-- name: Work
+- name: Fuse
   latitude: !secret work_latitude
   longitude: !secret work_longitude
   radius: 250

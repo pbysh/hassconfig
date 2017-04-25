@@ -8,6 +8,21 @@ light.paolo_lamp:
   icon: mdi:lamp
 light.amanda_lamp:
   icon: mdi:lamp
+switch.kitchen_1_switch_9_0:
+  icon: mdi:lightbulb
+  friendly_name: Kitchen 1 Light
+switch.kitchen_2_switch_12_0:
+  icon: mdi:lightbulb
+  friendly_name: Kitchen 2 Light
+switch.kitchen_3_switch_15_0:
+  icon: mdi:lightbulb
+  friendly_name: Kitchen 3 Light
+switch.patio_switch_11_0:
+  icon: mdi:lightbulb
+  friendly_name: Patio Light
+switch.garage_switch_16_0:
+  icon: mdi:lightbulb
+  friendly_name: Garage Light
 sensor.main_garage_door_time_in_state:
   icon: mdi:timer-sand
 sensor.main_garage_door_wifi_signal_strength:
@@ -19,3 +34,9 @@ sensor.small_garage_door_wifi_signal_strength:
 binary_sensor.front_door_sensor_8_0:
   friendly_name: Front Door
   sensor_class: opening
+group.downstairs_lights:
+  emulated_hue: true
+group.upstairs_lights:
+  emulated_hue: true
+group.outside_lights:
+  emulated_hue: true
